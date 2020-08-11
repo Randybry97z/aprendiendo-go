@@ -62,5 +62,56 @@ func main() {
 		capacidad = cap(meses)
 
 		fmt.Printf("La longitud es: %v, la capacidad es: %v %p\n", longitud, capacidad, meses)
+
+		//MAKE
+		slice := make([]int, 3, 3)
+
+		slice[0] = 100
+		slice[1] = 200
+		slice[2] = 300
+
+		slice = append(slice, 400)
+
+		fmt.Println(slice)
+		fmt.Println(len(slice))
+		fmt.Println(cap(slice))
+	*/
+
+	/*
+		//MAPS (Collecion desordenada de elementos)
+
+		dias := make(map[int]string)
+
+		dias[0] = "Domingo"
+		dias[1] = "Lunes"
+		dias[2] = "Martes"
+		dias[3] = "Miercoles"
+		dias[4] = "Jueves"
+		dias[5] = "Viernes"
+		dias[6] = "Sabado"
+
+		dias[4] = "JUEVES"
+
+		///Eliminar llave
+		delete(dias, 4)
+
+		fmt.Println(dias)
+
+		usuarios := make(map[string][]int)
+		usuarios["Bryan"] = []int{10, 9, 10, 7, 5}
+
+		fmt.Println(usuarios)
+
+		//ITERACION DE MAPAS
+
+		usuarios := map[int]string{} //Se crea variable tipo mapa
+
+		usuarios[1] = "Usuario 1"
+		usuarios[2] = "Usuario 2"
+		usuarios[3] = "Usuario 3"
+
+		for id, username := range usuarios {
+			fmt.Println(id, username)
+		}
 	*/
 }
