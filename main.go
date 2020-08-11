@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 //Exec go build (compila y genera ejecutable) || go run compila internamente
 
@@ -85,7 +83,7 @@ func main() {
 	fmt.Println(VIERNES)
 	fmt.Println(SABADO) */
 
-	//STRINGS
+	/* //STRINGS
 	//var curso string = "Curso profesional de Go!" //3
 	//var curso = "Curso profesional de Go!" //2
 	curso := "Curso profesional de Go!"
@@ -99,5 +97,24 @@ func main() {
 	//fmt.Println(caracter) //Imprime el char
 	fmt.Printf("%c\n", primerCaracter) //Imprime el valor del string
 	fmt.Printf("%c\n", ultimoCaracter)
-	//fmt.Println(reflect.TypeOf(caracter)) //Imprime el tipo de la variable
+	//fmt.Println(reflect.TypeOf(caracter)) //Imprime el tipo de la variable */
+
+	//LECTURA DE VALORES
+	var nombre string
+	var edad int
+	var altura float32
+
+	fmt.Print("Ingresa tu primer nombre: ")
+	//Se lee variable de tipo string
+	fmt.Scan(&nombre)
+
+	fmt.Print("Ingresa tu edad: ")
+	//Lee variable entero
+	fmt.Scan(&edad)
+
+	fmt.Print("Ingresa tu altura: ")
+	//Lee variable flotante
+	fmt.Scan(&altura)
+
+	fmt.Printf("Hola %s con una edad %d y una altura %.2f \n", nombre, edad, altura)
 }
