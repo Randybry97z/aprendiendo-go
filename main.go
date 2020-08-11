@@ -1,10 +1,21 @@
 package main
 
+import "fmt"
+
 //Exec go build (compila y genera ejecutable) || go run compila internamente
 
 //CONSTANTES
 
 //const COURSE string = "Curso profesional de Go!"
+const (
+	DOMINGO int = iota + 1 // Será una secuencia y por default 0 y si se quiere cambiar se le suma la cantidad
+	LUNES
+	MARTES
+	MIERCOLES
+	JUEVES
+	VIERNES
+	SABADO
+)
 
 func main() {
 
@@ -62,4 +73,13 @@ func main() {
 	//resultado := 20 == 20 || 30 == 30 || 20 > 40
 	resultado:= 15 == 15 && 60 < 100 && (90 < 100 || 100 == 90)
 	fmt.Println(resultado) */
+
+	//SECUENCIA DE VALORES
+	fmt.Println(DOMINGO)
+	fmt.Println(LUNES)
+	fmt.Println(MARTES)
+	fmt.Println(MIERCOLES)
+	fmt.Println(JUEVES)
+	fmt.Println(VIERNES)
+	fmt.Println(SABADO)
 }
