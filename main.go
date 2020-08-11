@@ -5,19 +5,35 @@ import "fmt"
 //Exec go build (compila y genera ejecutable) || go run compila internamente
 
 func main() {
-	var name string // default ==  ""
-	var age int     // default == 0
-	var lastName string = "Sandoval"
 
-	name = "Bryan Saúl"
-	age = 23
+	//DECLARACIÓN DE VARIABLES
+	/*
+		var name string // default ==  ""
+		var age int     // default == 0
+		var lastName string = "Sandoval"
 
-	city := "México"
-	postalCode := 55635
+		name = "Bryan Saúl"
+		age = 23
 
-	var height = 1.73
+		city := "México"
+		postalCode := 55635
 
-	fmt.Println(name, lastName)
-	fmt.Println(age, height)
-	fmt.Println(city, postalCode)
+		var height = 1.73
+
+		fmt.Println("Name: ", name, lastName)
+		fmt.Println("Age and height:", age, height)
+		fmt.Println("Address: ", city, postalCode) */
+
+	/*
+		var name string
+		var lastName string
+		var country string
+	*/
+
+	//DECLARACIÓN DE MÚLTIPLES VARIABLES
+	//var name, lastName, country string
+	//var name, lastName, country = "Bryan", "Sandoval", "México"
+	name, lastName, country := "Bryan", "Sandoval", "México"
+
+	fmt.Println(name, lastName, country)
 }
