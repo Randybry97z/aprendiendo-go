@@ -24,7 +24,7 @@ func main() {
 		}
 	*/
 
-	//else if
+	/* //else if
 	var calificacion int
 	fmt.Println("Ingresa tu calificación: ")
 	fmt.Scanf("%d", &calificacion)
@@ -39,5 +39,12 @@ func main() {
 		fmt.Println("Reprobaste")
 	} else {
 		fmt.Println("Calificación no válida")
+	} */
+
+	if nombre, edad := "Cody", 7; nombre == "Cody " {
+		fmt.Println("Hola ", nombre, "bienvenido al curso de Go")
+	} else {
+		fmt.Println("Los valores son: ", nombre, edad)
 	}
+
 }
