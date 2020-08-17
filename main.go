@@ -1,44 +1,43 @@
 package main
 
 func main() {
-	/* //FOR
+	/*//PANIC
 
-	for i := 0; i <= 100; i++ {
-		if i%2 == 0 {
-			fmt.Println(i)
-		}
-	} */
+	var dividendo, divisor int
 
-	/* //WHILE (no existe pero se reemplaza con un for)
+	fmt.Println("Ingresa un valor para el dividendo: ")
+	fmt.Scan(&dividendo)
 
-	numero := 12875
-	contador := 0
-	//while
-	for numero > 0 {
-		numero = numero / 10
-		contador++
+	fmt.Println("Ingresa un valor para el divisor: ")
+	fmt.Scan(&divisor)
+
+	if divisor == 0 {
+		panic("No es posible dividir sobre cero")
 	}
 
-	fmt.Println("La cantidad de digitos es: ", contador) */
+	resultado := dividendo / divisor
 
-	/* //FOREACH
-	animales := [...]string{"Perro", "Gato", "Pez", "Vaca", "Cerdo"}
+	fmt.Println(resultado) */
 
-	// for index, element (si se quiere evitar el error de variable no usada, se coloca guión bajo)
-	for _, element := range animales {
-		fmt.Println("El valor es: ", element)
+	/* 	//DO WHILE (no existe, se remplaza con un for)
+
+	var numero = 10
+	//Se declara variable booleana, se valida y se genera una sentencia
+	for ok := true; ok; ok = numero < 10 {
+		fmt.Println(numero)
+		numero++
 	} */
 
-	/* //CONTINUE & BREAK
+	/* // FOR INFINITO
 
-	for i := 1; i <= 10; i++ {
-		if i == 5 {
-			continue //Finaliza la iteración actual y pasa a la siguiente
-		}
+	var numero = 1
+	for {
+		fmt.Println(numero)
+		numero++
 
-		if i == 8 {
-			break //Finaliza la ejecución del ciclo actual
+		if numero == 100 {
+			//break
+			//panic("ERROR")
 		}
-		fmt.Println(i)
 	} */
 }
