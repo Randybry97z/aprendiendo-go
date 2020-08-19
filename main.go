@@ -1,43 +1,62 @@
 package main
 
+import "fmt"
+
+/*
+//DEFINICIÓN DE FUNCIONES
+
+func saludo(user string) {
+	fmt.Println("Hola ", user)
+}
+
+func add(numero1, numero2 int) int {
+	return numero1 + numero2
+}
+
+//Retornar diferentes tipos en funcion, se definen entre paréntesis
+func add(numero1, numero2 int) (int, string) {
+	return numero1 + numero2, "Un mensaje desde suma"
+} */
+
+//FUNCIONES POR ARGUMENTO
+
+//Creación de tipo de dato
+type Operacion func(balance, cantidad int) int
+
+func suma(num1, num2 int) int { //Función de tipo Operacion
+	return num1 + num2
+}
+
+func resta(num1, num2 int) int { //Función de tipo Operacion
+	return num1 - num2
+}
+
+func ejecutarOperacion(funcion Operacion, balance, cantidad int) {
+	fmt.Println("Antes de la operación")
+
+	result := funcion(balance, cantidad)
+	fmt.Println("El resultado es: ", result)
+
+	fmt.Println("Despues de la operación")
+}
+
 func main() {
-	/*//PANIC
 
-	var dividendo, divisor int
+	//	result, message := add(2, 5)
+	//	fmt.Println(result, message)
 
-	fmt.Println("Ingresa un valor para el dividendo: ")
-	fmt.Scan(&dividendo)
+	/* 	//FUNCIÓN ANÓNIMA
+	func() {
+		fmt.Println("Hola baby")
+	}()
 
-	fmt.Println("Ingresa un valor para el divisor: ")
-	fmt.Scan(&divisor)
-
-	if divisor == 0 {
-		panic("No es posible dividir sobre cero")
+	myFunc := func(user string) string {
+		message := fmt.Sprintf("Hola %s, te saludamos desde función sin nombre", user)
+		return message
 	}
 
-	resultado := dividendo / divisor
+	finalMessage := myFunc("Saúl")
+		 fmt.Println(finalMessage) */
+	ejecutarOperacion(suma, 10, 20)
 
-	fmt.Println(resultado) */
-
-	/* 	//DO WHILE (no existe, se remplaza con un for)
-
-	var numero = 10
-	//Se declara variable booleana, se valida y se genera una sentencia
-	for ok := true; ok; ok = numero < 10 {
-		fmt.Println(numero)
-		numero++
-	} */
-
-	/* // FOR INFINITO
-
-	var numero = 1
-	for {
-		fmt.Println(numero)
-		numero++
-
-		if numero == 100 {
-			//break
-			//panic("ERROR")
-		}
-	} */
 }
