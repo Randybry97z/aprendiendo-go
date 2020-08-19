@@ -1,30 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
-//FUNCIONES COMO VARIABLES
-func factorial(num int) int {
-
-	if num == 1 {
-		return 1
+//Manejo de errores
+func division(dividendo, divisor int) (int, error) {
+	if divisor == 0 {
+		return 0, errors.New("No es posible dividir sobre cero")
+	} else {
+		return dividendo / divisor, nil
 	}
-
-	return factorial(num-1) * num
 }
-
-type customFunction func(n int) int
 
 func main() {
 
-	//Funciones como variables
-	//var miFuncion = factorial
-	var miFuncion customFunction
-
-	if miFuncion == nil {
-		miFuncion = factorial
+	//MANEJO DE ERRORES
+	if resultado, err := division(10, 2); err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println("El resultado es: ", resultado)
 	}
-
-	result := miFuncion(3)
-
-	fmt.Println(result)
 }
