@@ -1,4 +1,4 @@
-package main
+package errores
 
 import (
 	"errors"
@@ -14,7 +14,7 @@ func division(dividendo, divisor int) (int, error) {
 	}
 }
 
-func main() {
+func errores() {
 
 	//MANEJO DE ERRORES
 	if resultado, err := division(10, 2); err != nil {
