@@ -1,4 +1,4 @@
-package main
+package estructuras
 
 import "fmt"
 
@@ -9,7 +9,7 @@ type User struct {
 	Age   int    //0
 }
 
-func main() {
+func estructuras() {
 
 	//ESTRUCTURA CREADA
 	//var cody User //Un objeto
