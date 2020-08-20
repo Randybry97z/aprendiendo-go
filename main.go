@@ -1,37 +1,27 @@
 package main
 
-import (
-	"fmt"
-	"os"
-)
+import "fmt"
+
+//CREAR ESTRUCTURAS
+type User struct {
+	Name  string //""
+	Email string //""
+	Age   int    //0
+}
 
 func main() {
-	//RECOVER
 
-	defer func() {
-		if err := recover(); err != nil {
-			fmt.Println("Ups!, al parecer el programa no finalizó correctamente")
-		}
-	}()
+	//ESTRUCTURA CREADA
+	//var cody User //Un objeto
 
-	if file, err := os.Open("hi.txt"); err != nil {
+	//cody.Name = "Cody"
+	//cody.Email = "cody@cody.com"
+	//cody.Age = 20
 
-		panic("no fue posible obtener el archivo")
+	Name := "Cody"
+	Email := "cody@cody.com"
+	Age := 20
+	cody := User{Name, Email, Age} //Definición del objeto
 
-	} else {
-
-		defer func() {
-			fmt.Println("Cerramos el archivo")
-			file.Close()
-		}()
-
-		contenido := make([]byte, 254)
-
-		long, _ := file.Read(contenido)
-
-		contenidoArchivo := string(contenido[0:long])
-
-		fmt.Println(contenidoArchivo)
-	}
-
+	fmt.Println(cody)
 }
