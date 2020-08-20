@@ -1,4 +1,4 @@
-package main
+package paquetes
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 
 //CREACIÓN DE PAQUETES (CodigoFacilito)
 
-func main() {
+func paquetes() {
 	curso := CodigoFacilito.Curso{Title: "Curso profesional de Go!"}
 
 	fmt.Println(curso.GetTitle())
